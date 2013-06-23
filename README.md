@@ -16,8 +16,8 @@ this is a responsive full page slideshow based on [here!](http://www.lacoste.com
 * [html5shiv](http://ali.md/html5shiv)
 
 #### v0.8 (6/23/2013)
-*fix resize bug
-*better javascript code
+* fix resize bug
+* better javascript code
 
 #### v0.7 (6/21/2013)
 * responsive slideshow
