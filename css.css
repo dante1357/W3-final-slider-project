@@ -39,7 +39,6 @@ html,body{
           background-size: contain;
   float: left;
 }
-/* ************************* end slideshow ************************* */
 
 /* ************************* start menu ************************* */
 .menu{
@@ -66,9 +65,15 @@ html,body{
   width: 54px;
   margin-left: 16px;
   text-align: center;
-  height: 64px;
+  height: -1px;
   cursor: pointer;
   font-size: 10px;
+}
+.bar li a{
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 64px;
 }
 .bar li:first-child{
   margin-left: -8px;
@@ -76,7 +81,7 @@ html,body{
 #lastLi{
   width: 48px;
 }
-.active{
+.bar li .active{
   color: #117D10;
 }
 .btn{
@@ -94,6 +99,7 @@ html,body{
           border-radius: 15px;
   background-color: #666;
   position: absolute;
+  left: 0;
   top: -7px;
   cursor: pointer;
 }

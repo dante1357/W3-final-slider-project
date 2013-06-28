@@ -14,6 +14,7 @@
     $train = $slideshow.find('.train'),
     $slidesWidth = $train.find('div').width(),
     $lis = $('.bar li'),
+    as = $lis.find('a'),
     activeTemp = $lis.find('.active'),
     resize = function(i){
       $(window).resize(function(){
@@ -23,7 +24,33 @@
         });
       });
     },
-    moveDokme = function(){
+    moveTrain = function(i){
+      $train.animate({
+        'left': $slidesWidth*(-i)
+      },1000);
+      activeTemp.removeClass();
+      as.eq(i).addClass('active');
+      activeTemp = as.eq(i);
+    },
+    moveDokme = function(i){
+      $dokme.animate({
+        'left':btnWidth*i
+      },200);
+    },
+    ajax = function(){
+      $.address.change(function(evt){
+        console.log(evt.pathNames);
+        if(!evt.pathNames.length){
+          $.address.value('/Fashion/0');
+        }
+        if(evt.pathNames[0]==='Fashion'){
+          moveDokme(evt.pathNames[1]);
+          moveTrain(evt.pathNames[1]);
+        }
+      });
+      as.address();
+    },
+    moveWithDokme = function(){
       $dokme.draggable({
         containment: $btn,
         axis: "x",
@@ -35,15 +62,8 @@
           for(var i=0;i<9;i++){
             btnWidthArray(i);
             if(xpos<btnWidthArray(i)){
-              $dokme.animate({
-                'left':btnWidth*i
-              },200);
-              $train.animate({
-                'left': $slidesWidth*(-i)
-              },1000);
-              activeTemp.removeClass();
-              $lis.eq(i).addClass('active');
-              activeTemp = $lis.eq(i);
+              moveDokme(i);
+              moveTrain(i);
               break;
             }
           }
@@ -51,13 +71,9 @@
       });
     },
     moveWithLis = function(i){
-      $lis.eq(i).click(function(){
-        $dokme.animate({
-          'left':btnWidth*i
-        },200);
-        $train.animate({
-          'left':$slidesWidth*(-i)
-        },1000);
+      as.eq(i).click(function(){
+        moveDokme(i);
+        moveTrain(i);
         activeTemp.removeClass();
         $(this).addClass('active');
         activeTemp = $(this);
@@ -70,8 +86,9 @@
       }
     },
     allFunction = function(){
-      moveDokme();
+      moveWithDokme();
       lisClick();
+      ajax();
     };
     allFunction();
 })(window.jQuery);

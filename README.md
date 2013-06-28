@@ -15,6 +15,10 @@ this is a responsive full page slideshow based on [here!](http://www.lacoste.com
 * [jQuery.js](http://ali.md/jquery.js)
 * [html5shiv](http://ali.md/html5shiv)
 
+#### v0.9 (6/28/2013)
+* add ajax to slider for next and back work
+* use jquery address to create hash address
+
 #### v0.8 (6/23/2013)
 * fix resize bug
 * better javascript code
