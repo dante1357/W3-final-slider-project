@@ -9,11 +9,18 @@ this is a responsive full page slideshow based on [here!](http://www.lacoste.com
 * [Ehsan Shadmehri `ehsansh`](https://github.com/ehsansh)
 
 ## TECHNOLOGY
-* [HTML5](http://ali.md/wiki/html5)
-* [CSS3](http://ali.md/css3ref)
-* [JavaScript](http://ali.md/wiki/javascript)
-* [jQuery.js](http://ali.md/jquery.js)
-* [html5shiv](http://ali.md/html5shiv)
+* [HTML5](http://en.wikipedia.org/wiki/HTML5)
+* [CSS3](http://en.wikipedia.org/wiki/CSS3#CSS_3)
+* [JavaScript](http://en.wikipedia.org/wiki/Javascript)
+* [jQuery.js](http://jquery.com/)
+* [Modernizr](http://modernizr.com/)
+
+#### v1.0 (7/28/2013)
+* use ajax loading for first viewing
+* use Modernizr js
+* use html5 chache.manifest for faster load in reload
+* better html and css code for li's and validator's
+* add 404.html page
 
 #### v0.9 (6/28/2013)
 * add ajax to slider for next and back work

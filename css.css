@@ -1,6 +1,41 @@
-*{
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
 html,body{
   width: 100%;
@@ -13,6 +48,20 @@ html,body{
        -o-background-size: cover;
           background-size: cover;
   font-family: "wf_SegoeUILight","wf_SegoeUI","Segoe UI Light","Segoe WP Light","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";
+}
+div.loading{
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color:#D1CEC8;
+  z-index:2;
+  display:none;
+  margin: auto;
+  background-image: url('images/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 /* ************************* start slideshow ************************* */
 .slideshow{
@@ -65,7 +114,7 @@ html,body{
   width: 54px;
   margin-left: 16px;
   text-align: center;
-  height: -1px;
+  height: inherit;
   cursor: pointer;
   font-size: 10px;
 }
@@ -74,6 +123,8 @@ html,body{
   color: #000;
   display: block;
   height: 64px;
+  font-size: 22px;
+  font-weight: bold;
 }
 .bar li:first-child{
   margin-left: -8px;
@@ -87,10 +138,11 @@ html,body{
 .btn{
   height: 3px;
   background-color: #000;
-  margin-top: 40px;
   position: relative;
   -webkit-border-radius: 3px;
           border-radius: 3px;
+  width: 600px;
+  margin: -5px auto 0 auto;
 }
 .dokme{
   width: 40px;
@@ -104,3 +156,37 @@ html,body{
   cursor: pointer;
 }
 /* ************************* end menu ************************* */
+
+/* ************************* start 404 ************************* */
+
+.badway{
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  padding-top: 1px;
+}
+.badway p{
+  text-align: center;
+  color: #999;
+  font-weight: bold;
+}
+.knock{
+  margin-top: 100px;
+  font-size: 110px;
+}
+.whos{
+  font-size: 55px;
+}
+.error{
+  margin-top: 100px;
+  font-size: 110px;
+}
+.homepage{
+  margin-top: 20px;
+  font-size: 24px;
+}
+.homepage a{
+  text-decoration: none;
+  color: #390;
+}
+/* ************************* end 404 ************************* */

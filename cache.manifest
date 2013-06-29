@@ -1,0 +1,29 @@
+CACHE MANIFEST
+
+# W3 final slider project v 1.0
+
+CACHE:
+index.html
+css.css
+jquery-1.9.1.js
+jquery.address.min.js
+jquery-ui.min.js
+js.js
+Modernizr.js
+images/1933.png
+images/1940.png
+images/1950.png
+images/1960_2.png
+images/1970_3.png
+images/1980_1.png
+images/1990.png
+images/2000.png
+images/2013.png
+images/loading.gif
+images/bg.jpg
+
+NETWORK:
+*
+
+FALLBACK:
+404.html

@@ -1,7 +1,13 @@
 /*jshint strict:true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, undef:true, unused:true, nonew:true, browser:true, devel:true, boss:true, curly:false, immed:false, latedef:true, newcap:true, plusplus:false, trailing:true, debug:false, asi:false, evil:false, expr:true, eqnull:false, esnext:false, funcscope:false, globalstrict:false, loopfunc:false */
 (function($){
   "use strict";
+  function updateSite(event){
+    window.applicationCache.swapCache();
+    window.location.reload();
+  }
+  window.applicationCache.addEventListener('updateready',updateSite, false);
   var
+    $load = $('.loading'),
     $btn = $('.btn'),
     $dokme = $('.dokme'),
     xpos,
@@ -16,6 +22,21 @@
     $lis = $('.bar li'),
     as = $lis.find('a'),
     activeTemp = $lis.find('.active'),
+    loading = function(){
+      $load.css({
+        opacity:1,
+        display:'block'
+      });
+    },
+    afterLoad = function(){
+      window.onload = function(){
+        $load.animate({
+          opacity:0
+        },700,null,function(){
+          $(this).css({display:'none'});
+        });
+      };
+    },
     resize = function(i){
       $(window).resize(function(){
         $slidesWidth = $train.find('div').width();
@@ -86,6 +107,8 @@
       }
     },
     allFunction = function(){
+      loading();
+      afterLoad();
       moveWithDokme();
       lisClick();
       ajax();
