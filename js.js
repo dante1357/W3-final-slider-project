@@ -58,19 +58,6 @@
         'left':btnWidth*i
       },200);
     },
-    ajax = function(){
-      $.address.change(function(evt){
-        console.log(evt.pathNames);
-        if(!evt.pathNames.length){
-          $.address.value('/Fashion/0');
-        }
-        if(evt.pathNames[0]==='Fashion'){
-          moveDokme(evt.pathNames[1]);
-          moveTrain(evt.pathNames[1]);
-        }
-      });
-      as.address();
-    },
     moveWithDokme = function(){
       $dokme.draggable({
         containment: $btn,
@@ -92,12 +79,9 @@
       });
     },
     moveWithLis = function(i){
-      as.eq(i).click(function(){
+      $lis.eq(i).click(function(){
         moveDokme(i);
         moveTrain(i);
-        activeTemp.removeClass();
-        $(this).addClass('active');
-        activeTemp = $(this);
         resize(i);
       });
     },
@@ -105,6 +89,20 @@
       for (var i = 0; i < 9; i++) {
         moveWithLis(i);
       }
+    },
+    ajax = function(){
+      $.address.change(function(evt){
+        console.log(evt.pathNames);
+        if(!evt.pathNames.length){
+          $.address.value('/Fashion/0');
+        }
+        if(evt.pathNames[0]==='Fashion'){
+          moveDokme(evt.pathNames[1]);
+          moveTrain(evt.pathNames[1]);
+          resize(evt.pathNames[1]);
+        }
+      });
+      as.address();
     },
     allFunction = function(){
       loading();
