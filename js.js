@@ -7,7 +7,6 @@
   }
   window.applicationCache.addEventListener('updateready',updateSite, false);
   var
-    $load = $('.loading'),
     $btn = $('.btn'),
     $dokme = $('.dokme'),
     xpos,
@@ -22,21 +21,6 @@
     $lis = $('.bar li'),
     as = $lis.find('a'),
     activeTemp = $lis.find('.active'),
-    loading = function(){
-      $load.css({
-        opacity:1,
-        display:'block'
-      });
-    },
-    afterLoad = function(){
-      window.onload = function(){
-        $load.animate({
-          opacity:0
-        },700,null,function(){
-          $(this).css({display:'none'});
-        });
-      };
-    },
     resize = function(i){
       $(window).resize(function(){
         $slidesWidth = $train.find('div').width();
@@ -105,8 +89,6 @@
       as.address();
     },
     allFunction = function(){
-      loading();
-      afterLoad();
       moveWithDokme();
       lisClick();
       ajax();
