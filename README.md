@@ -15,6 +15,9 @@ this is a responsive full page slideshow based on [here!](http://www.lacoste.com
 * [jQuery.js](http://jquery.com/)
 * [Modernizr](http://modernizr.com/)
 
+#### v1.0.4 (8/2/2013)
+* create a folder for scripts!!!!!
+
 #### v1.0.3 (8/2/2013)
 * Separate loading functions from main js file
 
