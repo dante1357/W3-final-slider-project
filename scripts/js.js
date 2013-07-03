@@ -30,6 +30,7 @@
       });
     },
     moveTrain = function(i){
+      $train.stop().animate();
       $train.animate({
         'left': $slidesWidth*(-i)
       },1000);
@@ -38,6 +39,7 @@
       activeTemp = as.eq(i);
     },
     moveDokme = function(i){
+      $dokme.stop().animate();
       $dokme.animate({
         'left':btnWidth*i
       },200);

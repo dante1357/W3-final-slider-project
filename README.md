@@ -15,6 +15,10 @@ this is a responsive full page slideshow based on [here!](http://www.lacoste.com
 * [jQuery.js](http://jquery.com/)
 * [Modernizr](http://modernizr.com/)
 
+#### v1.0.5 (8/3/2013)
+* add stop function for better Experience and smooth move
+* fix manifest file
+
 #### v1.0.4 (8/2/2013)
 * create a folder for scripts!!!!!
 

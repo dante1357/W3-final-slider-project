@@ -1,15 +1,16 @@
 CACHE MANIFEST
 
-# W3 final slider project v 1.0.4
+# W3 final slider project v 1.0.5
 
 CACHE:
 index.html
+scripts/jquery-1.9.1.js
+scripts/jquery.address.min.js
+scripts/jquery-ui.min.js
+scripts/js.js
+scripts/Modernizr.js
+scripts/loading.js
 css.css
-jquery-1.9.1.js
-jquery.address.min.js
-jquery-ui.min.js
-js.js
-Modernizr.js
 images/1933.png
 images/1940.png
 images/1950.png
